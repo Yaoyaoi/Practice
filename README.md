@@ -1,7 +1,7 @@
 # CCPonCodeForces
 
 Learn CPP from problem A.   
-one promlem a day   
+one problem a day   
 maybe
 
 ## 949A - Zebras
