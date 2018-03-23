@@ -7,3 +7,6 @@ maybe
 ## 949A - Zebras
 
 [code](949AZebras.cpp)
+
+# 949B - A Leapfrog in the Array
+[code](949BALeapfrogintheArray.cpp)
