@@ -34,3 +34,13 @@ maybe
 可以有效减少求字母个数的算法复杂度。
 ### code
 [CDOJ_G.cpp](CDOJ_G.cpp)
+
+## 924A - Mystical Mosaic
+## 题解
+1. 建立两个vector数组，分别存放每行黑框所在列和每列黑框所在行
+2. 从第一行开始，取出所有黑框列，放入数组coloumnlist中。
+3. 遍历coloumnlist，对于每列黑框所在行，读取改行中的列与coloumnlist进行比较，不相等则“No”。都相等时本次操作没有问题。
+4. 读下一个未被选取行，重复3 的操作。
+5. 所有行遍历完未输出“No”，则输出“Yes”。
+## code
+[924AMysticalMosaic.cppp](924AMysticalMosaic.cpp)
