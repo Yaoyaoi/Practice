@@ -18,9 +18,9 @@ maybe
 [E - Charlie]()
 ### 题解
 本题大约是CF上div2的A题水平;        
-容易发现, 所有在1前面的0都将被删掉;     
-使用两个计数器：zerocount记录零的个数; onecount记录不可能被删除的1(即在0前面的1)；      
-按顺序读取数列，当读取到0时, zerocount加一; 读取到1时，判断前面是否有0（zerocount是否等于零），有就zerocount减一；否则onecount加一；    
+容易发现,所有在1前面的0都将被删掉;     
+使用两个计数器: zerocount记录零的个数; onecount记录不可能被删除的1(即在0前面的1)；      
+按顺序读取数列，当读取到0时,zerocount加一;读取到1时，判断前面是否有0（zerocount是否等于零），有就zerocount减一；否则onecount加一；    
 答案为两个计数器之和。   
 ### code
 [CDOJ_E.cpp](CDOJ_E.cpp)
@@ -57,4 +57,4 @@ http://codeforces.com/problemset/problem/924/B
 2. i,j 分别为当前项的索引和下一项的索引，从下下个项到结尾项用二分查找确定k
 3. 遍历完输出最大值或-1;
 ### code
-[924AMysticalMosaic.cppp](924AMysticalMosaic.cpp)
+[924BThree-levelLaser.cpp](924BThree-levelLaser.cpp)
