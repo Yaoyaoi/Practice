@@ -58,3 +58,12 @@ http://codeforces.com/problemset/problem/924/B
 3. 遍历完输出最大值或-1;
 ### code
 [924BThree-levelLaser.cpp](924BThree-levelLaser.cpp)
+
+## 955A - Feed the cat
+### 题目
+http://codeforces.com/problemset/problem/955/A
+### 题解
+太简单了不写题解了；
+今天看错了做了一道div2的A,可以说是很伤心了,嘤嘤嘤
+### code
+[955AFeedthecat.cpp](955AFeedthecat.cpp)
