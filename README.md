@@ -67,3 +67,16 @@ http://codeforces.com/problemset/problem/955/A
 今天看错了做了一道div2的A,可以说是很伤心了,嘤嘤嘤
 ### code
 [955AFeedthecat.cpp](955AFeedthecat.cpp)
+
+## 923A - Primal Sport
+### 题目
+http://codeforces.com/problemset/problem/923/A
+### 题解
+数论题
+
+X1 的范围是[X2-D[X2]+1,X2-1];    
+对于每一个X1,计算 X0 = X1 -D[X1] + 1;   
+其中的最小值即为所求X0;   
+
+### code
+[923APrimalSport.cpp](923APrimalSport.cpp)
