@@ -96,3 +96,14 @@ http://codeforces.com/problemset/problem/930/A
 
 ### code
 [930APeculiarapple-tree.cpp](930APeculiarapple-tree.cpp)
+
+
+## 947B - Producing Snow
+### 题目
+http://codeforces.com/problemset/problem/947/B
+### 题解
+二分查找
+或者线段树也行呢
+
+### code
+[930APeculiarapple-tree.cpp](930APeculiarapple-tree.cpp)
