@@ -80,3 +80,19 @@ http://codeforces.com/problemset/problem/923/A
 
 ### code
 [923APrimalSport.cpp](923APrimalSport.cpp)
+
+## 930A - Peculiar apple-tree
+### 题目
+http://codeforces.com/problemset/problem/930/A
+### 题解
+深度优先搜索题
+
+不过我并没有实现深度优先搜索
+
+从第二个inflorescences开始，判断该inflorescences上的苹果是第几秒到达第一inflorescences，并记录在turns数组里（减少判断时间，当某个节点是该节点的后节点时，后面节点的秒数就是该节点秒数+1）。
+在数组apples数组第i项记录第i秒到达的苹果数。
+每个节点都对该节点对应的apples数组的项取反（1变0，0变1）
+最后将apples数组中所有项相加即为总苹果数；
+
+### code
+[930APeculiarapple-tree.cpp](930APeculiarapple-tree.cpp)
