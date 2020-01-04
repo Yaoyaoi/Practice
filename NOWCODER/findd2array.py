@@ -1,8 +1,17 @@
-def Find(self, target, array):
+def Find(target, array):
     if not array:
         return False
-
-
+    if not array[0]:
+        return False
+    i = 0
+    while target > array[i][len(array[0])-1]:
+        i += 1
+        if i == len(array):
+            return False
+    for j in range(i,len(array)):
+        if BinarySearch(target,array[j]):
+            return True
+    return False
 def BinarySearch(target, array):
     low = 0 
     high = len(array)-1
@@ -46,5 +55,12 @@ def BinarySearch(target, array):
 #            
 
 
-    
+if __name__ == "__main__":
+    a = [1,2,8,9]
+    b = [2,4,9,12]
+    c = [4,7,10,13]
+    d = [6,8,11,15]
+    array = [a,b,c]
+    target = 16
+    print(Find(target,[[]]))
 
