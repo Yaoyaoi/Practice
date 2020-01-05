@@ -27,40 +27,35 @@ def SelectSort(array):
 
 def InsertSort(array):
     for i in range(len(array)):
-        for j in range(i):
-            if array[j] > array[i]:
-                array.insert(j,array[i])
-                array.pop(i+1)
+        j = i
+        while j > 0:
+            if array[j-1] > array[j]:
+                temp = array[j-1]
+                array[j-1] = array[j]
+                array[j] = temp
+                j -= 1
+            else:
                 break
 
 
 def ShellSort(array):
     gap = int(len(array)/2)
-    while gap > 1:
+    while gap > 0:
         for i in range(len(array)):
-            for j in range(int(i/gap)):
-                if array[i%gap*(j+1)] > array[i]:
-                    k = i
-                    while k > i%gap*(j+1):
-                        temp = array[k]
-                        array[k] = array[k-gap]
-                        array[k-gap] = temp
-                        k -= gap
+            j = i - gap
+            while  j >= 0:
+                if array[j] > array[j+gap]:
+                    temp = array[j]
+                    array[j] = array[j+gap]
+                    array[j+gap] = temp
+                    j -= gap
+                else:
+                    break
         gap = int(gap/2)
-    gap = 2
-    for i in range(len(array)):
-        for j in range(int(i/gap)):
-            if array[i%gap*(j+1)] > array[i]:
-                k = i
-                while k > i%gap*(j+1):
-                    temp = array[k]
-                    array[k] = array[k-gap]
-                    array[k-gap] = temp
-                    k -= gap        
-    InsertSort(array)
+
 
 if __name__ == '__main__':
-    array = [32,46,77,11,4,6,8]
+    array = [2,32,25,46,5,77,11,4,58]
 #    BubbleSort(array)
 #    SelectSort(array)
 #    InsertSort(array)
