@@ -53,11 +53,77 @@ def ShellSort(array):
                     break
         gap = int(gap/2)
 
+def Merge(array,brray):
+    crray = []
+    alen = len(array)
+    blen = len(brray)
+    i = j = 0
+    while i < alen and j < blen:
+        if array[i] < brray[j]:
+            crray.append(array[i])
+            i += 1
+        else:
+            crray.append(brray[j])
+            j += 1
+    if i < alen:
+        crray.extend(array[i:])
+    if j < blen:
+        crray.extend(brray[j:])
+    return crray
+
+
+def MergeSort(array):
+    l = len(array)
+    if l > 2:
+        array = Merge(MergeSort(array[:int(l/2)]),MergeSort(array[int(l/2):]))
+    if l == 2:
+        if array[0] > array[1]:
+            temp = array[0]
+            array[0] = array[1]
+            array[1] = temp
+    return array
+
+
+def QuickSort(array):
+    if len(array) < 2:
+        return array
+    i = 0
+    j = len(array)-1
+    key = array[i]
+    while i < j:
+        while array[j] > key and i < j:
+            j -= 1
+        if i < j:
+            array[i] = array[j]
+        while array[i] < key and i < j:
+            i += 1
+        if i < j:
+            array[j] = array[i]
+    array[i] = key
+    brray = QuickSort(array[:i])
+    brray.append(key)
+    brray.extend(QuickSort(array[i+1:]))
+    return brray
+
+
+def BuildMaxHeap(array):
+    pass
+
+
+def AdjustHeap(array):
+    pass      
+
+
+def HeapSort(array):
+    pass
+
 
 if __name__ == '__main__':
     array = [2,32,25,46,5,77,11,4,58]
 #    BubbleSort(array)
 #    SelectSort(array)
 #    InsertSort(array)
-    ShellSort(array)
+#    ShellSort(array)
+#    array = MergeSort(array)
+#    array = QuickSort(array)
     print(array)
