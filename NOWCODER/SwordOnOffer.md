@@ -16,3 +16,29 @@
 * 题解：
     * 在python中使用递归会卡时间，java，c++可以过
     * 最终使用了动态规划完成了题目
+
+## 从尾到头打印链表
+* 考点：链表
+* program ：[printlistfromtailtohead.py](printlistfromtailtohead.py)
+* 题解：
+    * 三种方法
+        1. 将链表中的元素储存在列表中然后翻转列表
+        2. 使用栈
+        3. 递归
+
+## 反转链表
+* 考点： 代码的鲁棒性
+* program ：[reverseList.py](reverseList.py)
+* 题解：
+    * 两种方法：
+        1. 使用栈
+        2. 用两个指针分别指向前一个节点和后一个节点，然后按顺序交换值：
+            ```python
+            prep = None
+            nextp = None
+            while pHead:
+                nextp = pHead.next
+                pHead.next = prep
+                prep = pHead
+                pHead = nextp
+            ```
