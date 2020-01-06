@@ -106,17 +106,42 @@ def QuickSort(array):
     return brray
 
 
-def BuildMaxHeap(array):
-    pass
+def BuildMaxHeap(array, last):
+    if last < 1:
+        return
+    i = int((last-1)/2)
+    while i > -1:
+        ShiftDown(array, i, last)
+        i -= 1
 
 
-def AdjustHeap(array):
-    pass      
+def ShiftDown(array, node, last):
+    if 2*node+1 > last:
+        return
+    maxNode = node
+    if array[node] < array[2*node+1]:
+        maxNode = 2*node+1
+    if 2*node+2 <= last:
+        if array[maxNode] < array[2*node+2]:
+            maxNode = 2*node+2
+    if node == maxNode:
+        return 
+    temp = array[maxNode]
+    array[maxNode] = array[node]
+    array[node] = temp
+    ShiftDown(array, maxNode, last)
 
 
 def HeapSort(array):
-    pass
+    for i in range(len(array)-1):
+        BuildMaxHeap(array,len(array)-1-i)
+        temp = array[len(array)-1-i]
+        array[len(array)-1-i] = array[0]
+        array[0] = temp
 
+
+def RadixSort(array):
+    
 
 if __name__ == '__main__':
     array = [2,32,25,46,5,77,11,4,58]
@@ -126,4 +151,6 @@ if __name__ == '__main__':
 #    ShellSort(array)
 #    array = MergeSort(array)
 #    array = QuickSort(array)
+#    HeapSort(array)
+
     print(array)
