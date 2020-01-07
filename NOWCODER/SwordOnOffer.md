@@ -12,7 +12,7 @@
 
 ## 跳台阶
 * 考点： 递归
-* program ：[step.py](step.py)
+* program ：[jumpfloor.py](jumpfloor.py)
 * 题解：
     * 在python中使用递归会卡时间，java，c++可以过
     * 最终使用了动态规划完成了题目
@@ -42,3 +42,9 @@
                 prep = pHead
                 pHead = nextp
             ```
+
+## 变态跳台阶
+* 考点：贪心
+* program ： [hentaijumpfloor.py ](hentaijumpfloor.py )
+* 题解：
+        
