@@ -2,7 +2,7 @@
 
 ## 二维数组中的查找
 * 考点： 数组
-* program ：[findd2array.py](findd2array.py)
+* program: [findd2array.py](findd2array.py)
 * 题解
     * 使用c++一个个比都可以过得样子
     * python版本：
@@ -12,14 +12,14 @@
 
 ## 跳台阶
 * 考点： 递归
-* program ：[jumpfloor.py](jumpfloor.py)
+* program: [jumpfloor.py](jumpfloor.py)
 * 题解：
     * 在python中使用递归会卡时间，java，c++可以过
     * 最终使用了动态规划完成了题目
 
 ## 从尾到头打印链表
 * 考点：链表
-* program ：[printlistfromtailtohead.py](printlistfromtailtohead.py)
+* program: [printlistfromtailtohead.py](printlistfromtailtohead.py)
 * 题解：
     * 三种方法
         1. 将链表中的元素储存在列表中然后翻转列表
@@ -28,7 +28,7 @@
 
 ## 反转链表
 * 考点： 代码的鲁棒性
-* program ：[reverseList.py](reverseList.py)
+* program: [reverseList.py](reverseList.py)
 * 题解：
     * 两种方法：
         1. 使用栈
@@ -45,6 +45,13 @@
 
 ## 变态跳台阶
 * 考点：贪心
-* program ： [hentaijumpfloor.py ](hentaijumpfloor.py )
+* program: [hentaijumpfloor.py ](hentaijumpfloor.py )
 * 题解：
-        
+    * $f(n) = 2^{n-1}$
+
+## 重建二叉树
+* 考点：树
+* program: [reConstructBinaryTree.py](reConstructBinaryTree.py)
+* 题解：
+    * 树的基本知识 使用了递归的方法
+    * 代码中还实现了对树的后序遍历
