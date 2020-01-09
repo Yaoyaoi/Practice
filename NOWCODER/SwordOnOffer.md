@@ -17,6 +17,11 @@
     * 在python中使用递归会卡时间，java，c++可以过
     * 最终使用了动态规划完成了题目
 
+## 斐波那契数列
+* 递归
+* program: [jumpfloor.py](jumpfloor.py)
+* 题解：同跳台阶
+
 ## 从尾到头打印链表
 * 考点：链表
 * program: [printlistfromtailtohead.py](printlistfromtailtohead.py)
@@ -66,7 +71,6 @@
         3. 将栈1的数字取出存进栈1
     * 取：
         * 从栈2中取数字
-
 
 ## 翻转数组的最小数字
 * 考点：查找
