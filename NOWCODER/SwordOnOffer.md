@@ -80,3 +80,10 @@
         * 如果是递增序列 i移到mid+1
         * 如果是递减序列 j移到mid
         * 如果是相等的 无法判断，缩小检测范围 i++
+
+## 替换空格
+* 考点：字符串
+* program: [replaceSpace.py](replaceSpace.py)
+* 题解: 
+    * 利用python自己的函数 string.replace(' ','%20')
+    * 遍历一遍 
