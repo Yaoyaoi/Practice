@@ -92,5 +92,6 @@
 * 考点：数学
 * program:[power.py](power.py)
 * 题解：
-    * 如果直接乘的话会卡时间
-    * 可以考虑先计算 base 的 $2^n$ 的幂 （令$2^n < exponent$）
+    * 如果直接乘的话会卡时间（python，C++）
+    * 可以考虑先计算 base 的 2n 次幂 （令2n < exponent）
+    * 位运算
