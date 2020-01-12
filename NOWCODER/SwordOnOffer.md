@@ -87,3 +87,10 @@
 * 题解: 
     * 利用python自己的函数 string.replace(' ','%20')
     * 遍历一遍 
+
+## 数值的整数次方
+* 考点：数学
+* program:[power.py](power.py)
+* 题解：
+    * 如果直接乘的话会卡时间
+    * 可以考虑先计算 base 的 $2^n$ 的幂 （令$2^n < exponent$）
