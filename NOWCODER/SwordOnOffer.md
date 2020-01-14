@@ -95,3 +95,10 @@
     * 如果直接乘的话会卡时间（python，C++）
     * 可以考虑先计算 base 的 2n 次幂 （令2n < exponent）
     * 位运算
+
+## 合并两个排序的链表
+* 考点：链表
+* program:[mergelist.py](mergelist.py)
+* 题解：两种方法：
+    * 用归并排序的方法写
+    * 递归
