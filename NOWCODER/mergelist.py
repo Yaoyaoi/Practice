@@ -23,6 +23,19 @@ class Solution:
         if pHead2:
             pHead3.next = pHead2
         return result.next
+    
+    def Merge1(self, pHead1, pHead2):
+        if not pHead1:
+            return pHead2
+        if not pHead2:
+            return pHead1
+        if pHead1.val < pHead2.val:
+            result = pHead1
+            result.next = self.Merge1(pHead1.next, pHead2)
+        else:
+            result = pHead2
+            result.next = self.Merge1(pHead1, pHead2.next)
+        return result
 
     def printList(self, pHead):
         l = []
@@ -56,4 +69,4 @@ if __name__ == "__main__":
     sol = Solution()
     sol.printList(List1)
     sol.printList(List2)  
-    sol.printList(sol.Merge(List1, List2))  
+    sol.printList(sol.Merge1(List1, List2))  

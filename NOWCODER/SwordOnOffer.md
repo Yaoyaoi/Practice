@@ -90,7 +90,7 @@
 
 ## 数值的整数次方
 * 考点：数学
-* program:[power.py](power.py)
+* program: [power.py](power.py)
 * 题解：
     * 如果直接乘的话会卡时间（python，C++）
     * 可以考虑先计算 base 的 2n 次幂 （令2n < exponent）
@@ -98,7 +98,7 @@
 
 ## 合并两个排序的链表
 * 考点：链表
-* program:[mergelist.py](mergelist.py)
+* program: [mergelist.py](mergelist.py)
 * 题解：两种方法：
     * 用归并排序的方法写
     * 递归
