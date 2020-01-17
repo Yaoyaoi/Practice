@@ -22,6 +22,11 @@
 * program: [jumpfloor.py](jumpfloor.py)
 * 题解：同跳台阶
 
+## 矩形覆盖
+考点：递归
+* program：[jumpfloor.py](jumpfloor.py)
+* 题解：同跳台阶
+
 ## 从尾到头打印链表
 * 考点：链表
 * program: [printlistfromtailtohead.py](printlistfromtailtohead.py)
@@ -118,3 +123,5 @@
     * 方法1.遍历一遍得到链表的长度，再遍历一遍取第length-k节点
     * 方法2.用栈储存节点，在依次弹出，取第k个节点
     * 方法3.快慢指针，快指针起始在第k+1个元素，慢指针在第一个元素，两个指针同时后移，当快指针为none时，慢指针指向倒数第k个元素
+
+
