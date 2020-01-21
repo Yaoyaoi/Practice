@@ -148,3 +148,11 @@
 * program: [mirrorTree.py](mirrorTree.py)
 * 题解:
     * 交换树的左子树和右子树，对左子树和右子树递归调用该方法
+
+## 顺时针打印矩阵
+* 考点：数组
+* program: [printMatrix.py](printMatrix.py)
+* 题解：
+    * 方法一：定义四个边界变量up，down，left，right，循环收缩矩阵的边界
+    * 方法二：将第一行读入数组中 并移除第一行，顺时针旋转矩阵，重复上述步骤直到数组为空
+    * 方法三：标记数组
