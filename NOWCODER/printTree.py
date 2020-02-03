@@ -6,28 +6,41 @@ class TreeNode:
         self.right = None
 
 class Solution:
-    def __init__(self):
-        self.treeList = []
-    # 返回从上到下每个节点值列表，例：[1,2,3]
-    def PrintFromTopToBottom(self, root):
-        if root:
-            self.treeList.append(root.val)
-            nextlist = [root]
-            self.getNextList(nextlist)
-        return self.treeList
-        # write code here
+    #def __init__(self):
+    #    self.treeList = []
+    ## 返回从上到下每个节点值列表，例：[1,2,3]
+    #def PrintFromTopToBottom(self, root):
+    #    if root:
+    #        self.treeList.append(root.val)
+    #        nextlist = [root]
+    #        self.getNextList(nextlist)
+    #    return self.treeList
+    #    # write code here
 
-    def getNextList(self, lastlist):
-        nextlist = []
-        for item in lastlist:
-            if item.left:
-                nextlist.append(item.left)
-                self.treeList.append(item.left.val)
-            if item.right:
-                nextlist.append(item.right)
-                self.treeList.append(item.right.val)
-        if nextlist:
-            self.getNextList(nextlist)
+    #def getNextList(self, lastlist):
+    #    nextlist = []
+    #    for item in lastlist:
+    #        if item.left:
+    #            nextlist.append(item.left)
+    #            self.treeList.append(item.left.val)
+    #        if item.right:
+    #            nextlist.append(item.right)
+    #            self.treeList.append(item.right.val)
+    #    if nextlist:
+    #        self.getNextList(nextlist)
+    def PrintFromTopToBottom(self, root):
+        treeList = []
+        if not root:
+            return treeList
+        queue = [root]
+        while queue:
+            node = queue.pop(0)
+            treeList.append(node.val)
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+        return treeList
         
 
 if __name__ ==  '__main__':
