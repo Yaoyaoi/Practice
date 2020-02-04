@@ -185,8 +185,14 @@
         3. 重复2直到队列为空
 
 ### <a id="tips">二叉搜索树的后序遍历序列</a>
-
 * 考点：栈，树（二叉搜索树）
 * program:[VerifySquenceOfBST.py](VerifySquenceOfBST.py)
 * 题解：
     * 递归分割法
+
+### <a id="tips">二叉搜索树的后序遍历序列</a>
+* 考点：二叉树
+* program:[findPath.py](findPath.py)
+* 题解：
+    * 方法一：
+    * 方法二：
