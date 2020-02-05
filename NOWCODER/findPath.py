@@ -46,7 +46,7 @@ class Solution:
     #    self.sum -= root.val
     #    self.tempList.pop()
 
-    #遍历树的路径（非递归：栈
+    遍历树的路径（非递归：栈
     def TraverseTree(self, root):
         if not root:
             return []
@@ -60,7 +60,8 @@ class Solution:
                     stack.append((node.left, path + [node.left.val], sumPath+node.left.val))
                 if node.right:
                     stack.append((node.right, path + [node.right.val], sumPath+node.right.val))
-    
+
+
     
     
     
