@@ -5,12 +5,14 @@ class TreeNode:
         self.right = None
 
 class Solution:
-    def Convert(self, pRootOfTree):
-        if not pRootOfTree:
-            return pRootOfTree
-        minNode, maxNode = self.traverseTree(None, pRootOfTree, None)
-        return minNode
-
+    def __init__(self):
+        self.pLast = None
+    #def Convert(self, pRootOfTree):
+    #    if not pRootOfTree:
+    #        return pRootOfTree
+    #    minNode, maxNode = self.traverseTree(None, pRootOfTree, None)
+    #    return minNode
+    #
     #def traverseTree(self, before, node, after):
     #    # before/after: 父节点 （如果父节点大 after = parent before = None
     #    # minNode:以node为根节点的子树的最小节点
@@ -36,6 +38,25 @@ class Solution:
     #    node.left = before
     #    node.right = after
     #    return (minNode, maxNode)
+    
+class Solution:
+    def __init__(self):
+        self.pLast = None
+    def Convert(self, pRootOfTree):
+        if not pRootOfTree:
+            return None
+        head = pRootOfTree
+        if pRootOfTree.left:
+            head = self.Convert(pRootOfTree.left)
+        if self.pLast:
+            self.pLast.right = pRootOfTree
+            pRootOfTree.left = self.pLast
+        self.pLast = pRootOfTree
+        if pRootOfTree.right:
+            rHead = self.Convert(pRootOfTree.right)
+            pRootOfTree.right = rHead
+            rHead.left = pRootOfTree
+        return head
 
     def printList(self, pHead):
         array = []
