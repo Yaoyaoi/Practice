@@ -115,7 +115,7 @@ def BuildMaxHeap(array, last):
         i -= 1
 
 
-def ShiftDown(array, node, last):
+def SiftDown(array, node, last):
     if 2*node+1 > last:
         return
     maxNode = node
