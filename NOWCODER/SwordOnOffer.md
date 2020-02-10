@@ -255,7 +255,7 @@
 >　　　　　　2，  将Pj+1…Pk-1PjPk+1…Pn翻转
 >          P’= P1P2…Pj-1PkPn…Pk+1PjPk-1…Pj+1即P的下一个
 
-###<a id="list1">数组中出现次数超过一半的数</a>字
+### <a id="list1">数组中出现次数超过一半的数字</a>
 * 考点：时间效率
 * 知识点： 数组 数组中任意第K大的数字 
 * program: [moreThanhalfnum.py](moreThanhalfnum.py)
@@ -267,3 +267,11 @@
         * 如果count == 0，换擂主 host = 当前值，count = 1
         * 遍历一遍数组，如果一个数超过了半数，它一定是擂主
         * 再遍历一遍数组计算host出现的次数，如果大于数组长度的一半则满足条件
+
+### <a id="list2">最小的K个数</a>
+* 考点：时间效率
+* 知识点：数组  partition（快排） 堆
+* program: [GetKLeastNumbers.py](GetKLeastNumbers.py)
+* 题解：
+    * 方法一：o(nlogk) 用数组前k个元素建立k个节点最大堆。后面的元素如果比堆顶大，则将对顶设为该元素，对顶siftdown   （最后的数组没排序）
+    * 方法二： 利用patition的思想
