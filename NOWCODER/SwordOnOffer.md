@@ -274,4 +274,4 @@
 * program: [GetKLeastNumbers.py](GetKLeastNumbers.py)
 * 题解：
     * 方法一：o(nlogk) 用数组前k个元素建立k个节点最大堆。后面的元素如果比堆顶大，则将对顶设为该元素，对顶siftdown   （最后的数组没排序）
-    * 方法二： 利用patition的思想
+    * 方法二：最好情况o(n) 最坏情况o($n^2$) 利用patition的思想
