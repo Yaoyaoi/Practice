@@ -247,13 +247,12 @@
     * 方法一： 递归法：分别将每个位置交换到最前面位，之后全排列剩下的位。（相同的字符不交换）(由于不是字典序，没有AC) 
     * 方法二：字典序法：
 >       https://www.cnblogs.com/pmars/archive/2013/12/04/3458289.html
->       设P是[1,n]的一个全排列。
->　　　　　　P=P1P2…Pn=P1P2…Pj-1PjPj+1…Pk-1PkPk+1…Pn
->　　　　    find:　　j=max{i|Pi<Pi+1}
->　　　　　　　　　    k=max{i|Pi>Pj}
->　　　　　　1，  对换Pj，Pk，
->　　　　　　2，  将Pj+1…Pk-1PjPk+1…Pn翻转
->          P’= P1P2…Pj-1PkPn…Pk+1PjPk-1…Pj+1即P的下一个
+> 设P是[1,n]的一个全排列。
+> P=P1P2…Pn=P1P2…Pj-1PjPj+1…Pk-1PkPk+1…Pn
+> find: j=max{i|Pi<Pi+1} k=max{i|Pi>Pj}
+>1，  对换Pj，Pk，
+>2，  将Pj+1…Pk-1PjPk+1…Pn翻转
+> P’= P1P2…Pj-1PkPn…Pk+1PjPk-1…Pj+1即P的下一个
 
 ### <a id="list1">数组中出现次数超过一半的数字</a>
 * 考点：时间效率
@@ -271,7 +270,7 @@
 ### <a id="list2">最小的K个数</a>
 * 考点：时间效率
 * 知识点：数组  partition（快排） 堆
-* program: [GetKLeastNumbers.py](GetKLeastNumbers.py)
+* program: [GetKLeastNumbers.py](GetKLeastNumbers.py)     [GetLeastKNumbers.java](GetLeastKNumbers.java)
 * 题解：
     * 方法一：o(nlogk) 用数组前k个元素建立k个节点最大堆。后面的元素如果比堆顶大，则将对顶设为该元素，对顶siftdown   （最后的数组没排序）
     * 方法二：最好情况o(n) 最坏情况o($n^2$) 利用patition的思想
