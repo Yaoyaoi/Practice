@@ -12,6 +12,9 @@
     * <a href="#stack1">栈的压入、弹出序列</a>
 * 链表
     * <a href="#linklist1">复杂链表的复制</a>
+* 其他
+    * <a href="#other1">孩子们的游戏（最终胜利者）</a>
+    * <a href="#other2">丑数</a> 
 
 ### 二维数组中的查找
 * 考点： 数组
@@ -310,7 +313,7 @@
 * program: [FindGreatestSumofSubArray.py](FindGreatestSumofSubArray.py)
 * 题解：动态规划，循环访问数组， 到当前值的连续序列最大值 等于 前一个值的连续最大值加上当前值。
 
-### 孩子们的游戏(最终胜利者)
+### <a id="other1">孩子们的游戏(最终胜利者)</a>
 * 考点：抽象建模能力
 * 知识点：链表，数学
 * program: [Remain.py](Remain.py)
@@ -340,4 +343,9 @@ n-1 --> n-k-2
 k-1 --> n-2
 所以可以得到：right = left-k-1，则p(x) = (x-k-1)%n，而逆映射是p'(x) = (x+k+1)%n
 即0~n-1序列中最后剩下的数字等于（0~n-2序列中最后剩下的数字+k）%n，很明显当n=1时，
-只有一个数，那么剩下的数字就是0.问题转化为动态规划问题，关系表示为：
+只有一个数，那么剩下的数字就是0.问题转化为动态规划问题
+
+### <a id="other2">丑数</a>)
+* 考点：时间空间效率的平衡
+* 知识点：穷举
+* program: [UglyNumber.py](UglyNumber.py)
