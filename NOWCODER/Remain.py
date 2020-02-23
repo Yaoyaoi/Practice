@@ -27,6 +27,8 @@ class Solution:
     #        if lastNode.val == node.val:
     #            node.next = None
     #    return node.val
+    
+    #数学解法
     def LastRemaining_Solution(self, n, m):
         if n < 1 or m < 1:
             return -1
