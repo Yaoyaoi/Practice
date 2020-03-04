@@ -111,7 +111,7 @@ def BuildMaxHeap(array, last):
         return
     i = int((last-1)/2)
     while i > -1:
-        ShiftDown(array, i, last)
+        SiftDown(array, i, last)
         i -= 1
 
 
@@ -129,7 +129,7 @@ def SiftDown(array, node, last):
     temp = array[maxNode]
     array[maxNode] = array[node]
     array[node] = temp
-    ShiftDown(array, maxNode, last)
+    SiftDown(array, maxNode, last)
 
 
 def HeapSort(array):
@@ -138,6 +138,26 @@ def HeapSort(array):
         temp = array[len(array)-1-i]
         array[len(array)-1-i] = array[0]
         array[0] = temp
+
+def RadixSort(array):
+    bucket = [[],[],[],[],[],[],[],[],[],[]]
+    maxValue = max(array)
+    count = 0
+    brray = array
+    while maxValue:
+        maxValue //= 10
+        count += 1
+    dev = 1
+    while count:
+        for item in brray:
+            bucket[item//dev % 10].append(item)
+        brray = []
+        for i in range(10):
+            brray.extend(bucket[i])
+            bucket[i] = []
+        dev *= 10
+        count -= 1
+    return brray
 
 
 if __name__ == '__main__':
@@ -149,5 +169,5 @@ if __name__ == '__main__':
 #    array = MergeSort(array)
 #    array = QuickSort(array)
 #    HeapSort(array)
-
+    array = RadixSort(array)
     print(array)
