@@ -349,3 +349,17 @@ k-1 --> n-2
 * 考点：时间空间效率的平衡
 * 知识点：穷举
 * program: [UglyNumber.py](UglyNumber.py)
+
+
+### 整数中1的个数
+* 考点：时间效率
+* 知识点：查找 数学
+* program: [NumberOf1Between1AndN.py](NumberOf1Between1AndN.py)
+* 题解：数学归纳法
+
+
+### 把数组排成最小的数
+* 考点：时间效率
+* 知识点：数组
+* program: [MinNumber.py](MinNumber.py)
+* 题解：如果 str1 + str2 > str2 + str1 则 str1 > str2
