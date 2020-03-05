@@ -363,3 +363,10 @@ k-1 --> n-2
 * 知识点：数组
 * program: [MinNumber.py](MinNumber.py)
 * 题解：如果 str1 + str2 > str2 + str1 则 str1 > str2
+
+### 第一个只出现一次的字符位置
+* 考点：时间空间效率的平衡
+* 知识点： 哈希表 字符串
+* program: [FirstNotRepeatingChar.py](FirstNotRepeatingChar.py)
+* 题解：先在hash表中统计各字母出现次数，第二次扫描直接访问hash表获得次数
+
