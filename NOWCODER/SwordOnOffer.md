@@ -334,10 +334,8 @@ k+1 --> 0
 k+2 --> 1
      .
      .
-     .
 n-1 --> n-k-2
 0   --> n-k-1
-     .
      .
      .
 k-1 --> n-2
@@ -370,3 +368,11 @@ k-1 --> n-2
 * program: [FirstNotRepeatingChar.py](FirstNotRepeatingChar.py)
 * 题解：先在hash表中统计各字母出现次数，第二次扫描直接访问hash表获得次数
 
+
+### 数组中的逆序对
+* 考点: 时间空间效率的平衡
+* 知识点： 数组 排序
+* program: [InversePairs.py](InversePairs.py)
+* 题解：
+    * 方法一： 冒泡排序($o(n^2)$) 每交换一次就有一个逆序对
+    * 方法二： 归并排序（$o(nlogn)$）
