@@ -376,3 +376,17 @@ k-1 --> n-2
 * 题解：
     * 方法一： 冒泡排序($o(n^2)$) 每交换一次就有一个逆序对
     * 方法二： 归并排序（$o(nlogn)$）
+
+
+### 两个链表的第一个公共结点
+* 考点：时间空间效率的平衡
+* 知识点：链表
+* program: [FirstCommonNode.py](FirstCommonNode.py)
+* 题解：
+    * 方法一： 
+        1. 遍历链表2 记录节点数count1 记录最后一个节点pLast1
+        2. 遍历并翻转链表2 记录节点数count2 记录最后一个节点pLast2
+        3. 遍历链表1 记录节点数count2 记录最后一个节点pLast3
+        4. 如果pLast1 == pLast3，则两条链表没有公共节点 
+        5. 否则 两条链的公共节点数量为 length = (count1 + count2 - count3 + 1)/2
+        6. 以pLast2为起始节点 翻转链表并记录第length个节点，该节点为一个公共节点
