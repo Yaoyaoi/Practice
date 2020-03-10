@@ -383,14 +383,14 @@ k-1 --> n-2
 * 知识点：链表
 * program: [FirstCommonNode.py](FirstCommonNode.py)[FirstCommonNode.java](FirstCommonNode.java)
 * 题解：
-    * 方法一： 
+    * 方法一：(python)
         1. 遍历链表2 记录节点数count1 记录最后一个节点pLast1
         2. 遍历并翻转链表2 记录节点数count2 记录最后一个节点pLast2
         3. 遍历链表1 记录节点数count2 记录最后一个节点pLast3
         4. 如果pLast1 == pLast3，则两条链表没有公共节点 
         5. 否则 两条链的公共节点数量为 length = (count1 + count2 - count3 + 1)/2
         6. 以pLast2为起始节点 翻转链表并记录第length个节点，该节点为一个公共节点
-    * 方法二:
+    * 方法二:(java)
         1. 假定 List1长度: a+n  List2 长度:b+n, 且a小于b那么 p1 会先到链表尾部, 这时p2 走到 a+n位置,将p1换成List2头部
         2. 接着p2 再走b+n-(n+a) =b-a 步到链表尾部,这时p1也走到List2的b-a位置，还差a步就到可能的第一个公共节点。
         3. 将p2 换成 List1头部，p2走a步也到可能的第一个公共节点。如果恰好p1==p2,那么p1就是第一个公共节点。  或者p1和p2一起走n步到达列表尾部，二者没有公共节点，退出循环。 同理a>=b.
