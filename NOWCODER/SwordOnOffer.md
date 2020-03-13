@@ -402,6 +402,7 @@ k-1 --> n-2
 * 知识点：字符串
 * program: [RegularExpressionMatch.py](RegularExpressionMatch.py)
 * 题解:
+
 链接：https://www.nowcoder.com/questionTerminal/45327ae22b7b413ea21df13ee7d6429c?f=discussion
 来源：牛客网
 
@@ -413,4 +414,10 @@ k-1 --> n-2
 如果字符串第一个字符跟模式第一个字符不匹配，则模式后移2个字符，继续匹配。如果字符串第一个字符跟模式第一个字符匹配，可以有3种匹配方式：
 1. 模式后移2字符，相当于x*被忽略；
 2. 字符串后移1字符，模式后移2字符；
-3. 字符串后移1字符，模式不变，即继续匹配字符下一位，因为*可以匹配多位；
+3. 字符串后移1字符，模式不变，即继续匹配字符下一位，因为*可以匹配多位
+
+
+### 表示数值的字符串
+* 考点：字符串
+* 知识点：字符串
+* program:[IsNumberic.py](IsNumberic.py)
