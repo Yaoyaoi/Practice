@@ -4,23 +4,40 @@ class TreeNode:
         self.left = None
         self.right = None
 class Solution:
+    # BFS with Queue
     def TreeDepth(self, pRoot):
         if not pRoot:
             return 0
         count = 1
         depth = 1
-        Stack = [(pRoot, count)]
-        while Stack:
-            node, count = Stack.pop(0)
+        Queue = [(pRoot, count)]
+        while Queue:
+            node, count = Queue.pop(0)
             if node.left == None and node.right == None:
                 if count > depth:
                     depth = count
             if node.left:
-                Stack.append((node.left, count+1))
+                Queue.append((node.left, count+1))
+            if node.right:
+                Queue.append((node.right, count+1))
+        return depth
+    # DFS with Stack
+    def TreeDepthDFS(self, pRoot):
+        if not pRoot:
+            return 0
+        count = 1
+        depth = 1
+        Stack = [(pRoot,count)]
+        while Stack:
+            node, count = Stack.pop()
+            if node.left == None and node.right == None:
+                if count > depth:
+                    depth = count
             if node.right:
                 Stack.append((node.right, count+1))
+            if node.left:
+                Stack.append((node.left, count+1))
         return depth
-    
 if __name__ == "__main__":
     tree1 = TreeNode(1)
     tree2 = TreeNode(1)
@@ -48,5 +65,6 @@ if __name__ == "__main__":
     tree2.right = node11 
 
     sol = Solution()
-    print(sol.TreeDepth(tree1))
-    print(sol.TreeDepth(tree2))
+    #print(sol.TreeDepth(tree1))
+    #print(sol.TreeDepth(tree2))
+    print(sol.TreeDepthDFS(tree1))
