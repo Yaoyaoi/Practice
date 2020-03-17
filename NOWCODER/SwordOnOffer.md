@@ -428,3 +428,9 @@ k-1 --> n-2
 * 知识点：二分查找
 * program: [GetNumberOfK.py](GetNumberOfK.py)
 * 题解：二分查找找到该数字（找不到返回0），向前后两个方向计数
+
+### 二叉树的深度
+* 考点：知识迁移能力
+* 知识点：二分查找
+* program: [TreeDepth.py](TreeDepth.py)
+* 题解： 用任何一种方法遍历树即可
