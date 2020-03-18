@@ -434,3 +434,11 @@ k-1 --> n-2
 * 知识点：二分查找
 * program: [TreeDepth.py](TreeDepth.py)
 * 题解： 用任何一种方法遍历树即可
+
+
+### 数组中只出现一次的数字
+* 考点: 知识迁移能力
+* 知识点: 数组
+* program: [FindNumsAppearOnce.py](FindNumsAppearOnce.py)
+* 题解：
+    * 方法一：hashmap 记录各个数字出现的次数，然后找到出现一次的
