@@ -13,7 +13,32 @@ class Solution:
     #            result.append(i+minV)
     #    return result
 
+    def FindNumsAppearOnce(self, array):
+        if len(array) <= 2:
+            return array
+        temp = 0
+        for item in array:
+            temp = temp^item
+        i = 0
+        while True:
+            if temp&1 == 1:
+                break
+            temp = temp >> 1
+            i += 1
+        temp = 1
+        while i:
+            temp = temp << 1
+            i -= 1
+        num1 = 0
+        num2 = 0
+        for item in array:
+            if item & temp == temp:
+                num1 = num1^item
+            else:
+                num2 = num2^item
+        return [num1,num2]
 
+            
         
 
 if __name__ == "__main__":
