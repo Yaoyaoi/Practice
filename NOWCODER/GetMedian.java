@@ -42,3 +42,13 @@ class Solution {
         }
     }
 }
+public class GetMedian{
+    public static void main(String[] args){
+        int[] input = {1,4,5,6,7};
+        Solution mySol = new Solution();
+        for(int i = 0; i < input.length; i++){
+            mySol.Insert(input[i]);
+            System.out.println(mySol.GetMedian());
+        }
+    }
+}
