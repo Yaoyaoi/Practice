@@ -474,3 +474,15 @@ k-1 --> n-2
     * 本题中的平衡二叉树只要求平衡不要求是二叉搜索树
     * 技巧，如果是子树是平衡二叉树，返回该树的高度，可以避免多次遍历取高度
     * 真正的判断平衡二叉树(AVL)[IsBalanceTree.py](IsBalanceTree.py)
+
+### 构建乘积数组
+* 考点：数组
+* 知识点: 数组
+* program: [MultiplayArray.java](MultiplayArray.java)(方法二)
+* 题解：
+  * 方法一：
+    * 构建两个数组lefts,rights,第i位分别保存A数组中第i位的左边的乘积和右边的乘积。
+    * 循环计算lefts，rights的给位，每次只用已有的成绩乘上一个数。
+    * left[i+1] = left[i] * A[i]；right[i] = right[i+1] * A[i+1]
+  * 方法二：（优）
+    *  我们可以先把所有的left[i]求出，right[i]求出。
