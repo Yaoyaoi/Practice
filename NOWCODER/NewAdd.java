@@ -1,5 +1,5 @@
 public class NewAdd {
-    public int Add(int num1,int num2) {
+    public static int Add(int num1,int num2) {
         int result, ans;
         do {
             result = num1 ^ num2;       // 每一位相加
@@ -11,7 +11,6 @@ public class NewAdd {
     }
     public static void main(String[] args) {
         int a = 10,b =13;
-        NewAdd add = new NewAdd();
-        System.out.println(add.Add(a, b));
+        System.out.println(NewAdd.Add(a, b));
     }
 }
