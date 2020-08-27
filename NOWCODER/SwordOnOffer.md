@@ -570,5 +570,10 @@ k-1 --> n-2
 ### 和为S的两个数字
 * 考点：数组 数学 双指针
 * program：[FindNumbersWithSumS.java](FindNumbersWithSumS.java)
-* 题解：
-  * 左右夹逼
+* 题解: 左右夹逼
+
+
+### 左旋转字符串
+* 考点：字符串
+* program：[FindNumbersWithSumS.java](FindNumbersWithSumS.java)
+* 题解: 方法一：substring拼接 方法二：三次翻转字符串
